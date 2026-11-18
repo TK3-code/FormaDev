@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de formulaire</title>
+</head>
+<body>
+
+    <h1>Inscription</h1>
+
+    <label for="nom">Ton nom :</label>
+    <input type="text" id="nom" placeholder="Entre ton nom">
+
+    <button onclick="verifierNom()">Valider</button>
+
+    <p id="resultat"></p>
+
+    <script>
+        function verifierNom() {
+
+            let nom = document.getElementById("nom").value.trim();
+
+            if (nom === "") {
+                document.getElementById("resultat").textContent =
+                    "Erreur : veuillez saisir votre nom.";
+            } else {
+                document.getElementById("resultat").textContent =
+                    "Inscription réussie ! Bienvenue " + nom + ".";
+            }
+        }
+    </script>
+
+</body>
+</html>

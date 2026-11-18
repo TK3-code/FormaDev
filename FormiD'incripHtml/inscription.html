@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon application d'inscription</title>
+</head>
+<body>
+
+    <h1>Créer un compte</h1>
+
+    <label for="nom">Ton nom :</label>
+    <input type="text" id="nom" placeholder="Entre ton nom">
+
+    <br><br>
+
+    <label for="age">Ton âge :</label>
+    <input type="number" id="age" placeholder="Entre ton âge">
+
+    <br><br>
+
+    <button onclick="inscrire()">S'inscrire</button>
+
+    <p id="resultat"></p>
+
+
+<script>
+
+function inscrire() {
+     let nom = document.getElementById("nom").value.trim();
+    let ageTexte = document.getElementById("age").value;
+    let age = Number(ageTexte);
+
+    if (nom === "" || ageTexte === "") {
+
+        document.getElementById("resultat").textContent =
+            "Veuillez remplir tous les champs.";
+
+    } else if (age <= 0) {
+
+        document.getElementById("resultat").textContent =
+            "Veuillez saisir un âge valide.";
+
+    } else {
+
+        document.getElementById("resultat").textContent =
+            "Bienvenue " + nom + " ! Tu as " + age + " ans.";
+
+    }
+}
+
+    
+</script>
+
+
+</body>
+</html>

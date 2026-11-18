@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Projet</title>
+</head>
+<body>
+    <header>
+        <h1>MINI-PROJET</h1>
+        <p>Bienvenue sur mon mini-projet !</p>
+    </header>
+
+<nav>
+    <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#liste-taches">Liste de tâches</a></li>
+        <li><a href="#inscription">Formulaire d'inscription</a></li>
+        <li><a href="#formulaire-contact">Contact</a></li>
+        <li><a href="#apropos">À propos</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="accueil">
+
+    <h2>Accueil</h2>
+
+    <p>Ce mini-projet est une démonstration de mes compétences en développement web. Il inclut des fonctionnalités interactives et une interface utilisateur simple.</p>
+    
+<button id="bouton">Cliquer ici</button>
+
+<p>Merci de visiter mon mini-projet. N'hésitez pas à explorer et à interagir avec les éléments de la page.</p>
+
+<h3>Quel sont les bases utilisées ?</h3>
+<p>HTML, CSS et JavaScript sont les technologies de base utilisées pour créer ce mini-projet. HTML structure le contenu, CSS le stylise, et JavaScript ajoute l'interactivité.</p>
+
+<ul>
+    <li>HTML : Structure le contenu de la page.</li>
+    <li>CSS : Stylise l'apparence de la page.</li>
+    <li>JavaScript : Ajoute l'interactivité à la page.</li>
+</ul>
+
+    </section>
+
+    <section id="liste-taches">
+
+    <h2>Liste de tâches</h2>
+
+    <p id="nomUtilisateur">Bonjour ! Bienvenue sur mon mini-projet.</p>
+
+    <p id="statistiques">Chargement...</p>
+
+    <input type="text" id="tache" placeholder="Écris une tâche">
+
+    <button id="ajouter">Ajouter</button>
+
+    <ul id="liste"></ul>
+
+    </section>
+
+<section id="inscription">
+
+    <h2>Formulaire d'inscription</h2>
+
+    <label for="nom">Ton nom :</label>
+    <input type="text" id="nom" placeholder="Entre ton nom">
+
+    <br><br>
+
+    <label for="age">Ton âge :</label>
+    <input type="number" id="age" placeholder="Entre ton âge">
+
+    <br><br>
+
+    <button onclick="inscrire()">S'inscrire</button>
+
+    <p id="resultat"></p>
+
+</section>
+
+<section id="formulaire-contact">
+
+    <h2>Contact</h2>
+
+    <p>Pour toute question ou suggestion, veuillez me contacter à l'adresse suivante :</p>
+    <p><a href="mailto:kouyamikenzo@gmail.com">kouyamikenzo@gmail.com</a></p>
+    <p>Vous pouver également me joindre via ce formulaire :</p>
+
+    <form id="formcontact">
+
+        <label for="nomContact">Nom :</label>
+        <input type="text" id="nomContact" name="nomContact" placeholder="Ton nom" required>
+
+        <br><br>
+
+        <label for="emailContact">Adresse e-mail :</label>
+        <input type="email" id="emailContact" name="emailContact" placeholder="Ton adresse e-mail" required>
+
+        <br><br>
+
+        <label for="messageContact">Message :</label>
+        <textarea id="messageContact" name="messageContact" placeholder="Ton message" required></textarea>
+
+        <br><br>
+
+        <button type="submit">Envoyer</button>
+
+    </form>
+
+    <p id="confirmation"></p>
+
+</section>
+
+<section id="apropos">
+
+    <h2>À propos</h2>
+
+    <p>Ce mini-projet a été développé par moi Kenzo, un passionné de développement web.
+         Mon objectif est de démontrer mes compétences en HTML, CSS et JavaScript.</p>
+
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+
+    <p>Merci d'avoir visité mon mini-projet. 
+        J'espère que vous avez apprécié l'expérience et que vous avez trouvé les fonctionnalités intéressantes.
+         <br><br>
+        J'en rajouterais certainement dans le futur !</p>
+</section>
+
+
+
+</main>
+
+<style> 
+    /* Styles general mini-projet */
+    * {
+        box-sizing: border-box;
+    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #448f65;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #243b55;
+    color: white; 
+    padding: 35px 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section {
+    background-color: rgb(228, 145, 78);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 450px;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button {
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+
+header {
+        padding: 25px 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    input,
+     textarea {
+        max-width: 100%;
+    }
+
+}
+</style>
+
+<script>
+    
+let bouton = document.getElementById("bouton");
+
+bouton.addEventListener("click", function() {
+
+    let nom = prompt("Quel est votre nom ?");
+    
+
+    if (nom != null && nom.trim() !== "") {
+        document.getElementById("nomUtilisateur").textContent = 
+        
+        "Bonjour, " + nom + " ! Bienvenue sur mon mini-projet.";
+        alert("Bonjour, " + nom + " ! Bienvenue sur mon mini-projet.");
+    
+    } else {
+        alert("Vous n'avez pas entré de nom. Veuillez réessayer.");
+}
+
+
+});
+
+ let champ = document.getElementById("tache");
+let boutonAjouter = document.getElementById("ajouter");
+let liste = document.getElementById("liste");
+
+// Récupérer les tâches sauvegardées
+let taches = JSON.parse(localStorage.getItem("tachesJour10")) || [];
+
+function afficherStatistiques() {
+    let total = taches.length;
+
+    let terminees = taches.filter(function(tache) {
+        return tache.terminee === true;
+    }).length;
+
+    document.getElementById("statistiques").textContent =
+        "Total : " + total + " | Terminées : " + terminees;
+}
+
+function afficherTaches() {
+    liste.innerHTML = "";
+
+    if (taches.length === 0) {
+    liste.textContent = "Aucune tâche pour le moment.";
+}
+
+    taches.forEach(function(tache, index) {
+        let nouvelleTache = document.createElement("li");
+
+        nouvelleTache.textContent = tache.texte + " ";
+
+        if (tache.terminee) {
+            nouvelleTache.style.textDecoration = "line-through";
+        }
+
+        let boutonTerminer = document.createElement("button");
+        boutonTerminer.textContent = tache.terminee ? "Annuler" : "Terminer";
+
+        boutonTerminer.addEventListener("click", function() {
+            taches[index].terminee = !taches[index].terminee;
+            sauvegarderTaches();
+        });
+
+        let boutonSupprimer = document.createElement("button");
+        boutonSupprimer.textContent = "Supprimer";
+
+        boutonSupprimer.addEventListener("click", function() {
+            taches.splice(index, 1);
+            sauvegarderTaches();
+        });
+
+        nouvelleTache.appendChild(boutonTerminer);
+        nouvelleTache.appendChild(boutonSupprimer);
+
+        liste.appendChild(nouvelleTache);
+    });
+}
+
+function sauvegarderTaches() {
+    localStorage.setItem("tachesJour10", JSON.stringify(taches));
+    afficherTaches();
+    afficherStatistiques();
+}
+
+boutonAjouter.addEventListener("click", function() {
+    let texte = champ.value.trim();
+
+    if (texte !== "") {
+        taches.push({
+            texte: texte,
+            terminee: false
+        });
+
+        champ.value = "";
+        sauvegarderTaches();
+    }
+});
+
+afficherTaches();
+afficherStatistiques();
+
+function inscrire() {
+     let nom = document.getElementById("nom").value.trim();
+    let ageTexte = document.getElementById("age").value;
+    let age = Number(ageTexte);
+
+    if (nom === "" || ageTexte === "") {
+
+        document.getElementById("resultat").textContent =
+            "Veuillez remplir tous les champs.";
+
+    } else if (age <= 0) {
+
+        document.getElementById("resultat").textContent =
+            "Veuillez saisir un âge valide.";
+
+    } else {
+
+        document.getElementById("resultat").textContent =
+            "Bienvenue " + nom + " ! Tu as " + age + " ans.";
+
+    }
+}
+
+let formulaire = document.getElementById("formulaire-contact");
+
+formulaire.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("confirmation").textContent =
+        "Votre message a été pris en compte !";
+
+    formulaire.reset();
+});
+
+</script>
+
+</body>
+</html>

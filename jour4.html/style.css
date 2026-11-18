@@ -1,0 +1,110 @@
+
+/* Réglages généraux */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #222;
+}
+
+/* La carte principale */
+.carte {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Les titres */
+h1 {
+    color: green;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-top: 24px;
+}
+
+/* Les champs du formulaire */
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Le bouton */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .carte {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+    }
+}
+
+.competences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.competences li {
+    background-color: #e8f5e9;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.grille div {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
